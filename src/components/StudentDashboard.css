@@ -1,0 +1,193 @@
+.dashboard-content {
+  max-width: 1400px;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.title-icon {
+  width: 24px;
+  height: 24px;
+  color: #2563eb;
+}
+
+.classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.class-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.class-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.class-info p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.class-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.progress-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.progress-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 60px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-item > span:first-child {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-align: right;
+}
+
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.tutor-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.tutor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tutor-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.tutor-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.tutor-card p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.tutor-rating {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .class-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .class-item button {
+    width: 100%;
+  }
+
+  .tutors-grid {
+    grid-template-columns: 1fr;
+  }
+}
